@@ -19,4 +19,6 @@ Route::get('/', function () {
 
 Auth::routes();
 
+Route::post('/update/token', [App\Http\Controllers\Auth\RegisterController::class, 'updateToken'])->name('updateToken');
+
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
